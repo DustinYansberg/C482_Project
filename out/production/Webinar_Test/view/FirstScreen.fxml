@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="346.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FirstScreen">
+   <Pane layoutX="10.0" layoutY="71.0" prefHeight="275.0" prefWidth="414.0">
+      <opaqueInsets>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </opaqueInsets>
+      <Group layoutX="27.0" layoutY="24.0">
+         <children>
+            <TableView fx:id="partTable" layoutY="37.0" prefHeight="141.0" prefWidth="380.0">
+               <columns>
+                  <TableColumn fx:id="partTblPartID" prefWidth="75.0" text="Part ID" />
+                  <TableColumn fx:id="partTblPartName" prefWidth="75.0" text="Part Name" />
+                  <TableColumn fx:id="partTblInvLvl" prefWidth="116.0" text="Inventory Level" />
+                  <TableColumn fx:id="partTblPrice" prefWidth="113.0" text="Cost Per Unit" />
+               </columns>
+            </TableView>
+            <Button fx:id="partAddBtn" layoutX="214.0" layoutY="187.0" mnemonicParsing="false" onAction="#addPartButtonAction" text="Add" />
+            <Button fx:id="partModBtn" layoutX="263.0" layoutY="187.0" mnemonicParsing="false" onAction="#modifyPartButtonAction" text="Modify" />
+            <Button fx:id="partDeleteBtn" layoutX="329.0" layoutY="187.0" mnemonicParsing="false" text="Delete" />
+            <TextField layoutX="214.0" prefHeight="25.0" prefWidth="166.0" promptText="Search by Part ID or Name" />
+         </children>
+      </Group>
+      <effect>
+         <DropShadow blurType="GAUSSIAN" height="2.0" radius="0.5" width="2.0" />
+      </effect>
+   </Pane>
+   <Pane layoutX="455.0" layoutY="71.0" prefHeight="275.0" prefWidth="414.0">
+      <opaqueInsets>
+         <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+      </opaqueInsets>
+      <effect>
+         <DropShadow blurType="GAUSSIAN" height="2.0" radius="0.5" width="2.0" />
+      </effect>
+      <children>
+         <Group layoutX="27.0" layoutY="24.0">
+            <children>
+               <TableView fx:id="prdctTable" layoutY="37.0" prefHeight="141.0" prefWidth="380.0">
+                  <columns>
+                     <TableColumn fx:id="prdctTblPrdctID" prefWidth="75.0" text="Product ID" />
+                     <TableColumn fx:id="prdctTblPrdctName" prefWidth="75.0" text="Product Name" />
+                     <TableColumn fx:id="prdctTblInv" prefWidth="116.0" text="Inventory Level" />
+                     <TableColumn fx:id="prdctTblPrice" prefWidth="113.0" text="Cost Per Unit" />
+                  </columns>
+               </TableView>
+               <Button fx:id="prdctAddBtn" layoutX="214.0" layoutY="187.0" mnemonicParsing="false" onAction="#addProductButtonAction" text="Add" />
+               <Button fx:id="prdctModBtn" layoutX="263.0" layoutY="187.0" mnemonicParsing="false" onAction="#modifyProductButtonAction" text="Modify" />
+               <Button fx:id="prdctDeleteBtn" layoutX="329.0" layoutY="187.0" mnemonicParsing="false" text="Delete" />
+               <TextField layoutX="214.0" prefHeight="25.0" prefWidth="166.0" promptText="Search by Product ID or Name" />
+            </children>
+         </Group>
+      </children>
+   </Pane>
+</AnchorPane>
